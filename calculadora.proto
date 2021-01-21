@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+service Calculadora
+{
+  rpc Soma(Numeros) returns (Resultado) {}
+  rpc Subtracao(Numeros) returns (Resultado) {}
+  rpc Multiplicacao(Numeros) returns (Resultado) {}
+  rpc Divisao(Numeros) returns (Resultado) {}
+}
+
+message Numeros 
+{
+  int32 primeiroNum = 1;
+  int32 segundoNum = 2;
+}
+
+message Resultado 
+{
+  int32 resultado = 1;
+}
